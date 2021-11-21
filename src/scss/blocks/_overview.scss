@@ -1,0 +1,58 @@
+.overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--card);
+    border-radius: .4rem;
+    transition: var(--transition);
+
+    @include desktop {
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--card-hover);
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-weight: 700;
+        color: var(--text-blue);
+        transition: var(--transition);
+    }
+
+    &__icon {
+        // justifica cada elemento POR SEPARADO DE SU PADRE en el (GRID) --> justify-self
+        justify-self: right;
+    }
+
+    &__counter {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        transition: var(--transition);
+    }
+
+
+    &__stats {
+        display: flex;
+        align-items: center;
+        justify-self: right;
+        margin-top: .5rem;
+    }
+
+    &__porcent {
+        margin: 0;
+        font-size: .8rem;
+        font-weight: 700;
+        padding-left: .3rem;
+
+        &--up {
+            color: var(--green-color);
+        }
+        &--down {
+            color: var(--red-color);
+        }
+    }
+}

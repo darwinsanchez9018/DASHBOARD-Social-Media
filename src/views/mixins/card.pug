@@ -1,0 +1,21 @@
+mixin card(icon, name, counter, text, arrow, day, status="up")
+    .card
+        if status == "up"
+            .card__social
+                img(src=`assets/images/${icon}`, alt="social-icon").card__icon
+                p.card__name= name
+            p.card__counter= counter
+            p.card__text= text
+            .card__stats
+                img(src=`assets/images/${arrow}`, alt="arrow").card__arrow
+                p.card__day.card__day--up= day
+
+        if status == "down"
+            .card__social
+                img(src=`assets/images/${icon}`, alt="social-icon").card__icon
+                p.card__name= name
+            p.card__counter= counter
+            p.card__text= text
+            .card__stats
+                img(src=`assets/images/${arrow}`, alt="arrow").card__arrow
+                p.card__day.card__day--down= day

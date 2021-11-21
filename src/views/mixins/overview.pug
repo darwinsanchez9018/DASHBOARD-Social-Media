@@ -1,0 +1,17 @@
+mixin overview(text, icon, counter, arrow, porcent, status="up")
+    .overview
+        if status == "up"
+            p.overview__text= text
+            img(src=`assets/images/${icon}`, alt="social-icon").overview__icon
+            p.overview__counter= counter
+            .overview__stats
+                img(src=`assets/images/${arrow}`, alt="arrow").overview__arrow
+                p.overview__porcent.overview__porcent--up= porcent
+
+        else
+            p.overview__text= text
+            img(src=`assets/images/${icon}`, alt="social-icon").overview__icon
+            p.overview__counter= counter
+            .overview__stats
+                img(src=`assets/images/${arrow}`, alt="arrow").overview__arrow
+                p.overview__porcent.overview__porcent--down= porcent

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+@import "config/variables";
+@import "base/base";
+@import "mixins/reset-list";
+@import "mixins/breakpoints";
+
+@import "blocks/header";
+@import "blocks/toggler";
+@import "blocks/main";
+
+@import "blocks/card";
+@import "blocks/overview";
+
+@import "blocks/footer";
