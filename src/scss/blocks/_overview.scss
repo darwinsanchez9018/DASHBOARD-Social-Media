@@ -3,9 +3,14 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1rem;
     padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
     background-color: var(--card);
     border-radius: .4rem;
     transition: var(--transition);
+    
+    @include tablet {
+        margin-bottom: 0;
+    }
 
     @include desktop {
         cursor: pointer;
